@@ -21,6 +21,7 @@ const
 
 var fs = require('fs');
 var Promise = require('es6-promise').Promise;
+require('dotenv').config()
 
 var affbuf = fs.readFileSync('en_US.aff');
 var dictbuf = fs.readFileSync('en_US.dic');
