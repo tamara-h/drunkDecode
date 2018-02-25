@@ -296,6 +296,7 @@ function receivedMessage(event) {
         break;
 
       case 'video':
+          
         requiresServerURL(sendVideoMessage, [senderID]);
         break;
 
