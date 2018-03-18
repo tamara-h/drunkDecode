@@ -278,63 +278,63 @@ function receivedMessage(event) {
     // keywords and send back the corresponding example. Otherwise, just echo
     // the text we received.
     switch (messageText.replace(/[^\w\s]/gi, '').trim().toLowerCase()) {
-      case 'hello':
-      case 'hi':
-        sendHiMessage(senderID);
-        break;
+      // case 'hello':
+      // case 'hi':
+      //   sendHiMessage(senderID);
+      //   break;
 
-      case 'image':
-        requiresServerURL(sendImageMessage, [senderID]);
-        break;
-
-      case 'gif':
-        requiresServerURL(sendGifMessage, [senderID]);
-        break;
-
-      case 'audio':
-        requiresServerURL(sendAudioMessage, [senderID]);
-        break;
-
-      case 'video':
-
-        requiresServerURL(sendVideoMessage, [senderID]);
-        break;
-
-      case 'file':
-        requiresServerURL(sendFileMessage, [senderID]);
-        break;
-
-      case 'button':
-        sendButtonMessage(senderID);
-        break;
-
-      case 'generic':
-        requiresServerURL(sendGenericMessage, [senderID]);
-        break;
-
-      case 'receipt':
-        requiresServerURL(sendReceiptMessage, [senderID]);
-        break;
-
-      case 'quick reply':
-        sendQuickReply(senderID);
-        break;
-
-      case 'read receipt':
-        sendReadReceipt(senderID);
-        break;
-
-      case 'typing on':
-        sendTypingOn(senderID);
-        break;
-
-      case 'typing off':
-        sendTypingOff(senderID);
-        break;
-
-      case 'account linking':
-        requiresServerURL(sendAccountLinking, [senderID]);
-        break;
+      // case 'image':
+      //   requiresServerURL(sendImageMessage, [senderID]);
+      //   break;
+      //
+      // case 'gif':
+      //   requiresServerURL(sendGifMessage, [senderID]);
+      //   break;
+      //
+      // case 'audio':
+      //   requiresServerURL(sendAudioMessage, [senderID]);
+      //   break;
+      //
+      // case 'video':
+      //
+      //   requiresServerURL(sendVideoMessage, [senderID]);
+      //   break;
+      //
+      // case 'file':
+      //   requiresServerURL(sendFileMessage, [senderID]);
+      //   break;
+      //
+      // case 'button':
+      //   sendButtonMessage(senderID);
+      //   break;
+      //
+      // case 'generic':
+      //   requiresServerURL(sendGenericMessage, [senderID]);
+      //   break;
+      //
+      // case 'receipt':
+      //   requiresServerURL(sendReceiptMessage, [senderID]);
+      //   break;
+      //
+      // case 'quick reply':
+      //   sendQuickReply(senderID);
+      //   break;
+      //
+      // case 'read receipt':
+      //   sendReadReceipt(senderID);
+      //   break;
+      //
+      // case 'typing on':
+      //   sendTypingOn(senderID);
+      //   break;
+      //
+      // case 'typing off':
+      //   sendTypingOff(senderID);
+      //   break;
+      //
+      // case 'account linking':
+      //   requiresServerURL(sendAccountLinking, [senderID]);
+      //   break;
       default:
           autoCorrectMessage(messageText)
               .then(function (res) {
